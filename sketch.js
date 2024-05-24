@@ -16,4 +16,5 @@ function setup() {
 function draw() {
   background(imagemDaEstrada);
   image(imagemDoAtor, 100, 366, 30, 30)
+  image(imagemCarro, 420, 40, 50, 40)
 }
