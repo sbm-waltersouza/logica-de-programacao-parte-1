@@ -1,7 +1,11 @@
 let imagemDaEstrada;
 let imagemDoAtor;
 let imagemCarro;
+//carros
+let xCarro = 600;
 
+// ator
+let yAtor = 366;
 
 function preload() {
   imagemDaEstrada = loadImage("imagens/estrada.png");
@@ -15,5 +19,29 @@ function setup() {
 
 function draw() {
   background(imagemDaEstrada);
-  image(imagemDoAtor, 100, 366, 30, 30)
+  mostrarAtor();
+  mostrarCarro();
+  movimentaCarro();
+  movimentaAtor();
+}
+
+function mostrarAtor() {
+  image(imagemDoAtor, 100, yAtor, 30, 30);
+}
+
+function mostrarCarro() {
+  image(imagemCarro, xCarro, 40, 50, 40)
+}
+
+function movimentaCarro() {
+  xCarro -= 2;
+}
+
+function movimentaAtor() {
+  if (keyIsDown(UP_ARROW)) {
+    yAtor -= 3;
+  }
+  if (keyIsDown(DOWN_ARROW)) {
+    yAtor += 3;
+  }
 }
