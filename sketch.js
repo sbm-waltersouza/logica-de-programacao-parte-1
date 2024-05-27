@@ -4,9 +4,9 @@ function setup() {
 
 function draw() {
   background(imagemDaEstrada);
-  mostrarAtor();
-  mostrarCarro();
+  mostraAtor();
+  mostraCarro();
   movimentaCarro();
   movimentaAtor();
+  voltaPosicaoInicialDoCarro();
 }
-
