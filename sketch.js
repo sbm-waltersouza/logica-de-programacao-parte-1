@@ -1,5 +1,8 @@
+let canvas;
+
 function setup() {
-  createCanvas(500, 400);
+  canvas = createCanvas(500, 400);
+  canvas.position((windowWidth - width) / 2, (windowHeight - height) / 2);
   somDaTrilha.loop();
 }
 
@@ -13,4 +16,8 @@ function draw() {
   verificaColisao();
   incluirPontos();
   marcarPonto();
+}
+
+function windowResized() {
+  canvas.position((windowWidth - width) / 2, (windowHeight - height) / 2);
 }
